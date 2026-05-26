@@ -1,0 +1,1 @@
+Self-hosted LLM inference gateway built from scratch. Routes requests by complexity to save cost, caches semantically-similar prompts, manages parallel workers with back-pressure, and survives crashes via an append-only write-ahead log.
