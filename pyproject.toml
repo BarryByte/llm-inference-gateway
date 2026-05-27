@@ -28,5 +28,8 @@ dev = [
     "pytest-cov>=5.0",
 ]
 
+[tool.setuptools.packages.find]
+include = ["gateway*"]
+
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
