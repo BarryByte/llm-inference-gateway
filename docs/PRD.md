@@ -5,7 +5,7 @@
 A self-hosted gateway that sits between client apps and one or more LLM providers.
 
 It exists because direct, synchronous calls to LLM APIs break down under real load:
-requests pile up, providers throttle you, identical prompts get billed twice, and a
+requests pile up, providers throttle me, identical prompts get billed twice, and a
 single crash loses in-flight work. This gateway is the layer that absorbs those problems.
 
 Think of it as a smaller, transparent version of what tools like LiteLLM, Portkey, or
@@ -18,7 +18,7 @@ OpenRouter do — but built from primitives so every layer is understandable.
 3. Skip the LLM entirely when a semantically similar prompt has already been answered.
 4. Survive crashes — restart and resume in-flight work without losing or duplicating it.
 5. Route prompts to the cheapest model that can handle them.
-6. Expose enough metrics that you can actually watch it work.
+6. Expose enough metrics that I can actually watch it work.
 
 ## 3. Non-goals
 
@@ -51,7 +51,7 @@ OpenRouter do — but built from primitives so every layer is understandable.
                           +  Dead-letter Queue
 ```
 
-Every box is something you can open, read, and reason about. No black-box workflow
+Every box is something I can open, read, and reason about. No black-box workflow
 engine.
 
 ## 5. Core features
@@ -110,7 +110,7 @@ Before queuing, the router decides which model tier should handle the prompt:
 
 Complexity is scored by a tiny local model (Ollama, e.g. `qwen2.5:0.5b`) plus
 heuristics (token count, presence of code blocks, keywords like "step by step").
-The router's decision is logged with every request so you can audit it later.
+The router's decision is logged with every request so I can audit it later.
 
 ### 5.4 Priority queue (custom)
 
@@ -227,7 +227,7 @@ This is what "done" looks like, not a checklist someone else grades:
   one row and one response.
 - Tests catch bugs that matter: rate-limit boundary, cache near-miss/near-hit,
   WAL replay correctness, queue fairness under priority mix.
-- Logs and metrics are useful enough that you can answer "why was this prompt
+- Logs and metrics are useful enough that I can answer "why was this prompt
   slow?" without attaching a debugger.
 
 ## 10. Stretch ideas (post-v1)

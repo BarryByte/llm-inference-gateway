@@ -10,7 +10,8 @@ class Settings(BaseSettings):
     redis_url: str = "redis://localhost:6379"
 
     # Rate limiting
-    provider_rate_limit: int = 300       # calls per minute
+    provider_rate_limit: int = 300       # calls per minute, shared across all workers
+    per_user_rate_limit: int = 0         # 0 = disabled
     rate_limit_window_seconds: int = 60
 
     # Queue

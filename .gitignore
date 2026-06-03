@@ -26,6 +26,13 @@ htmlcov/
 # WAL / runtime data
 /tmp/gateway-wal/
 
+# Local interview/study notes — not part of the repo
+gateway/queue/README.md
+gateway/cache/README.md
+gateway/worker/README.md
+gateway/router/README.md
+gateway/limiter/README.md
+
 # IDE
 .vscode/
 .idea/

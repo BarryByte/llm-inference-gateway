@@ -21,6 +21,7 @@ class Prompt(Base):
     embedding = Column(Vector(384))
     attempts = Column(Integer, default=0)
     last_error = Column(Text)
+    callback_url = Column(String, nullable=True)
     created_at = Column(DateTime, default=datetime.now)
     updated_at = Column(DateTime, default=datetime.now, onupdate=datetime.now)
 

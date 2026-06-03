@@ -12,6 +12,7 @@ CREATE TABLE prompts (
     embedding   vector(384),
     attempts    INT  NOT NULL DEFAULT 0,
     last_error  TEXT,
+    callback_url TEXT,
     created_at  TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     updated_at  TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
